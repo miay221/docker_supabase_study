@@ -1,6 +1,7 @@
 # docker_supabase_study
 
 
+## DB 모델링
 + member 테이블:
   - 이메일 (Primary Key)
   - 이름
