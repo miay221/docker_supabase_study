@@ -1,10 +1,10 @@
 # docker_supabase_study
 
 
-1. member 테이블:
-이메일 (Primary Key)
-이름
-비밀번호
++ member 테이블:
+  - 이메일 (Primary Key)
+  - 이름
+  - 비밀번호
 
 3. 민원분류 테이블:
 id (serial, Primary Key)
