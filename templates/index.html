@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO</title>
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("login_form");
+            form.style.display = form.style.display === "none" ? "block" : "none";
+        }
+
+        function resetForm() {
+            window.location.href="/chatbot";
+        }
+
+    </script>
+</head>
+<body>
+{% if user_name %}
+    <h3>{{ user_name }}님, 반갑습니다!</h3>
+    <!-- 이미 로그인 한 경우, 로그인 폼 숨기기 -->
+    <h3>Landimark 방문을 환영합니다! 챗봇 서비스를 소개합니다.</h3>
+    <input type="button" name="log_out" value="로그아웃" onclick="window.location.href='/logout'">
+{% else %}
+    <h3>Landimark 방문을 환영합니다! 챗봇 서비스를 소개합니다.</h3>
+
+    <form method="POST">
+        <label>회원이신가요?</label><br>
+        <!-- 로그인 폼 표시 버튼 -->
+        <input type="button" name="is_member" value="로그인" onclick="toggleForm()">
+        <!-- 비회원 버튼 -->
+        <input type="button" name="is_not_member" value="비회원" onclick="resetForm()">
+        <!-- 회원가입 버튼 -->
+        <input type="button" name="sign_in" value="회원가입" onclick="location.href='/signup'"> 
+    </form>
+
+    <form method="POST" id="login_form" style="display:none;">
+        이메일: <input type="email" name="user_email" required><br>
+        비밀번호: <input type="password" name="user_passwd" required><br>
+        <input type="submit" value="로그인">
+    </form>
+    <!-- 오류 메시지가 있을 경우 표시 -->
+    {% if error_message %}
+        <div style="color: red;">{{ error_message }}</div>
+    {% endif %}
+    
+{% endif %}
+</body>
+</html>
