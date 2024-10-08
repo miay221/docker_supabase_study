@@ -16,7 +16,7 @@
   - 민원분류 (Foreign Key, 민원분류 테이블의 id 참조)
   - 작성날짜 (DATE)
   - 작성시간 (TIMESTAMP)
-  - 민원내용 (TEXT)
+  - 민원내용 (TEXT) 
 
 + chatbot 테이블:
   - 원천 질문 데이터 (TEXT) ** 인덱스 지정
