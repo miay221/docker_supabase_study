@@ -18,8 +18,8 @@
   - 작성시간 (TIMESTAMP)
   - 민원내용 (TEXT) 
 
-+ chatbot 테이블:
++ chatbot 테이블<style="red">:
   - 원천 질문 데이터 (TEXT) ** 인덱스 지정
-  - 민원 ID (Foreign Key, 민원분류 테이블의 id 참조) >> 각 데이터 파일을 분리 예정 ※
+  - 민원 ID (Foreign Key, 민원분류 테이블의 id 참조)
   - 로봇 답변 데이터 (TEXT)
   - category (varchar, 필터링 기준)
