@@ -18,7 +18,8 @@
   - 작성시간 (TIMESTAMP)
   - 민원내용 (TEXT) 
 
-+ chatbot 테이블<style="red">:
+** csv 파일로 모델이 실시간 처리예정 : 스키마 생성 필요없음 **
++ chatbot 테이블:
   - 원천 질문 데이터 (TEXT) ** 인덱스 지정
   - 민원 ID (Foreign Key, 민원분류 테이블의 id 참조)
   - 로봇 답변 데이터 (TEXT)
