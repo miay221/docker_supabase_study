@@ -26,3 +26,8 @@
   - 민원 ID (Foreign Key, 민원분류 테이블의 id 참조)
   - 로봇 답변 데이터 (TEXT)
   - category (varchar, 필터링 기준)
+
+
+---
+<h3> 동기와 비동기 처리 - 챗봇의 트래픽 처리 방법 ① </h3>
+<img src= "
